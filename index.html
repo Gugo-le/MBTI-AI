@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="canonical" href="https://mbtiai.netlify.app/">
+    <meta name="naver-site-verification" content="8b48806c8f5851424052fe1e03f301e8b8ed3d40" />
+    <!--네이버 서치 어드바이저-->
+    <meta name="google-site-verification" content="BilxKxfubLRSWhNSY850yWRtlzOPIZL7adtt_9ILRAg" />
+    <!--구글 서치 콘솔-->
+
+
+    <title>인공지능이 판단한 당신의 MBTI는?</title>
+    <meta name="title" content="인공지능이 판단한 당신의 MBTI는?">
+    <meta name="subject" content="얼굴로 보는 인공지능 MBTI 테스트, 인공지능이 나의 MBTI를 맟춘다?!?!">
+    <meta name="description" content="얼굴로 보는 인공지능 MBTI 테스트!! 과연 인공지능은 나의 mbti를 맞출 수 있을까? 궁금하다면 테스트!" />
+    <meta name="keywords" content="인공지능이 판단한 당신의 mbti는?, 인공지능이 판단한 당신의 MBTI는?, 인공지능이 생각하는 당신의 MBTI는?, 인공지능이 생각하는 당신의 mbti는?, mbti 테스트, MBTI 테스트, 관상, 관상으로 보는 인공지능 mbti, 관상 mbti, 인공지능 mbti, 얼굴 mbti, gugo, 구현승, isfj, istp, isfp, infj, istj, intj, infp, intp, enfj, enfp, entj, entp, esfj, esfp, estj, estp, mbti, MBTI">
+    <meta name="author" content="Gugo">
+    <link rel="stylesheet" href="style.css">
+    <link rel="android-chrome" sizes="192x192" href="./favicon_io/android-chrome-192x192.png">
+    <link rel="android-chrome" sizes="512x512" href="./favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="shortcut icon" href="./favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon_io/favicon.ico" type="image/x-icon">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="인공지능이 판단한 당신의 MBTI는?">
+    <meta property="og:description" content="인공지능이 판단한 당신의 MBTI는? 얼굴로 보는 인공지능 MBTI 테스트, 인공지능이 당신의 MBTI를 맞춘다?!?!">
+    <meta property="og:image" content="https://mbtiai.netlify.app/cover.png">
+    <meta property="og:url" content="https://mbtiai.netlify.app/">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-145482737-6');
+    </script>
+</head>
+
+<body>
+    <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="https://mbtiai.netlify.app/">MBTI 인공지능</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="emotion.html">MBTI 감정
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">추후 기능 업데이트
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <!----                    나중에 기능 구현 제대로 할 예정
+    <li class="nav-item active" onclick="gtag()">
+                        <a class="nav-link" id="mbti-top-link" href="mbti/bear.html">나는 어떤 곰일까?</a>
+                    </li>
+                    <li class="nav-item active" onclick="gtag()">
+                        <a class="nav-link" id="mbti-top-link" href="mbti/cat.html">나는 어떤 고양이일까?</a>
+                    </li>
+                    <li class="nav-item active" onclick="gtag()">
+                        <a class="nav-link" id="mbti-top-link" href="mbti/deer.html">나는 어떤 사슴일까?</a>
+                    </li>
+                    <li class="nav-item active" onclick="gtag()">
+                        <a class="nav-link" id="mbti-top-link" href="mbti/dinosaur.html">나는 어떤 공룡일까?</a>
+                    </li>
+                    <li class="nav-item active" onclick="gtag()">
+                        <a class="nav-link" id="mbti-top-link" href="mbti/dog.html">나는 어떤 개일까?</a>
+                    </li>
+                    <li class="nav-item active" onclick="gtag()">
+                        <a class="nav-link" id="mbti-top-link" href="mbti/fox.html">나는 어떤 여우일까?</a>
+                    </li>
+--->
+
+        </div>
+    </nav>
+
+    <section class="section">
+        <h1 class="title">MBTI 테스트</h1>
+        <h2 class="subtitle">얼굴로 보는 인공지능 MBTI 테스트</h2>
+        <h2 class="sr-only">인공지능이 봤을 때 나의 MBTI는?</h2>
+        <h3 class="sr-only">유명인들의 MBTI를 학습한 인공지능이 나의 MBTI를 판단한다!</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+    </section>
+    <h4 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h4>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여자</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남자</p>
+    </section>
+
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <img src="uploadicon.png" class="mt-5 pt-5 upload">
+                <h3 class="mb-5 pb-5 pt-4  upload-text">사진을 업로드해주세요!</h3>
+            </div>
+        </div>
+        <div id="capture">
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                <div id="loading" class="animated bounce">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p class="text-center">AI가 당신의 MBTI를 분석중입니다.</p>
+                </div>
+                <p class="result-message"></p>
+                <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <h5 class="author-name">*업로드 되는 사진은 어디에도 저장, 활용되지 않습니다.</h5>
+                <h6 class="notice">*실제 검사와 다를 수 있습니다.</h6>
+                <div class="addthis_inline_share_toolbox_gs6a"></div>
+                <div> ↑↑↑ 친구에게 <span style="color:blue">링크</span> 공유하기 ↑↑↑</div>
+
+
+                <div class="pt-3 image-title-wrap">
+                    <button type="button p-2" class="try-again-btn" onclick="gaReload1();" data-toggle="modal" data-target="#adModal">
+                    <span class="try-again-text">다른 사진으로 재시도</span>
+                </button>
+                </div>
+                <button id="shot" class="insta-btn">
+                <span class="insta-text">인스타 스토리 공유하기</span>
+            </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-3">
+    </div>
+    <footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p class="author-contact">BLOG:
+                <a href="https://blog.naver.com/rngustmd0719">_coder's_life_</a>
+            </p>
+            <p class="author-contact">EMAIL: guhyunseung0718@gmail.com</p>
+            <p class="author-contact">출처: 나무위키, 조코딩</p>
+            <p class="authoe-contact">SPON: 한국 조커이한
+                <a href="https://www.youtube.com/channel/UCpbgxb-908UOpbqujxIySmQ">이한</a>은 누구일까?</p>
+            <p class="author--">----------------------------------------------------------</p>
+
+        </div>
+    </footer>
+    <div class="ad-banner300">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-NmluUVeoPmGTKZYX" data-ad-width="300" data-ad-height="250"></ins>
+    </div>
+
+    <div class="ad-banner300">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-FczrhB5Tuk0NhmJp" data-ad-width="300" data-ad-height="250"></ins>
+    </div>
+    <div class="ad-banner">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-PpTyDawl7xfrGwMx" data-ad-width="320" data-ad-height="100"></ins>
+    </div>
+    <div class="ad-banner">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-IEtYT9peAQnTjXMq" data-ad-width="320" data-ad-height="100"></ins>
+    </div>
+
+    <div>
+        <p class="author-letter">*추후 기능이 업데이트 될 예정입니다.</p>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="adModal" tabindex="-1" role="dialog" aria-labelledby="adModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adModalLabel">(AD)광고 - 재시도를 한번 더 눌러주세요.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button p-2" class="try-again-btn" onclick="gaReload2();">
+                        <span class="try-again-text">다른 사진으로 재시도</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $("#shot").on("click", function() {
+                // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
+                html2canvas(document.querySelector("#capture")).then(canvas => {
+                    saveAs(canvas.toDataURL('image/png'), "인공지능이 판단한 당신의 mbti는.png");
+                });
+            });
+
+            function saveAs(uri, filename) {
+                // 캡쳐된 파일을 이미지 파일로 내보낸다.
+                var link = document.createElement('a');
+                if (typeof link.download === 'string') {
+                    link.href = uri;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                } else {
+                    window.open(uri);
+                }
+            }
+        });
+    </script>
+
+    <script>
+        function gaReload1() {
+            gtag('event', '다른 사진으로 재시도 1차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+        }
+
+        function gaReload2() {
+            gtag('event', '다른 사진으로 재시도 2차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+            window.location.reload();
+        }
+    </script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--카카오 애드핏 js-->
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60bad7228ce88d70"></script>
+    <!--addthis-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/p7Uo0QK4k/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/p7Uo0QK4k/";
+        let model, webcam, labelContainer, maxPredictions;
+        async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                gtag('event', 'MBTI 테스트 수행', {
+                    'event_category': 'MBTI 테스트 수행',
+                    'event_label': '남자'
+                });
+                switch (prediction[0].className) {
+                    case "isfj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ISFJ!"
+                        resultExplain = "게으른 완벽주의자! 단체 활동 보다 혼자 할 수 있는 일을 좋아해요. 배려심이 많고 공감도 잘해줘요. 겉으로는 덤덤해 보이지만 속으로 많은 생각을 해요. 어쩔 땐 내향적이고 어쩔 땐 외향적이라서 나도 날 잘 몰라요"
+                        resultCeleb = "ISFJ 연예인: 위하준, 진영(GOT7), 장민호(트로트), 이민혁(비투비)"
+                        gtag('event', '남자 결과 ISFJ', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "istp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ISTP!"
+                        resultExplain = "무뚝뚝한 당신의 첫인상은 차가워 보이지만 묘한 매력을 풍겨 언제나 인기가 넘친다. 자존심이 세계 1등과 맞먹지만 관심 받는 것을 좋아하고 연인에게는 은근히 애교쟁이다. 시크한 츤데레로 연인에게 끊임없이 설렘을 안겨주는 당신은 고양이와 닮았다!"
+                        resultCeleb = "ISTP 연예인: 김종민, 장성규, 슈가(BTS), 곽시양, 박명수"
+                        gtag('event', '남자 결과 ISTP', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "isfp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ISFP!"
+                        resultExplain = "나는 너 너는 나! 공감 능력이 정말 뛰어나요. 주목받는 걸 싫어하고 소소하게 칭찬받는 걸 좋아해요. 주변 의견을 잘 받아들이고 양보도 잘해요. 거절을 못 해서 하기 싫지만 할 때도 있어요. 겸손하다는 말을 자주 들어요"
+                        resultCeleb = "ISFP 연예인: 권정열, 양세찬, 백현(EXO), 영빈(SF9), 아이엠(몬스타엑스), 유재석 "
+                        gtag('event', '남자 결과 ISFP', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "infj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...INFJ!"
+                        resultExplain = "집돌이, 집순이들! 새로운 일보다는 익숙한 일을 하는 걸 좋아해요. 친한 친구와 단둘이 노는 걸 좋아하고 내가 좋아하는 사람한테 정말 잘해줘요. 감수성이 풍부하고 생각이 많아요"
+                        resultCeleb = "INFJ 연예인: 김범수, 남주혁, 로꼬, 민경훈, 서강준"
+                        gtag('event', '남자 결과 INFJ', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "istj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ISTJ!"
+                        resultExplain = "시간 약속을 잘 지키고 약속 어기는 것을 엄청 싫어해요. 일이 틀어지는 게 싫어서 혼자 일하는 게 좋아요. 남보다는 나에게 관심이 많아요. 공감 능력이 조금 부족해요. 여행 가면 주로 내가 계획을 세워요"
+                        resultCeleb = "ISTJ 연예인: 김성규(인피니트), 차태현, 신동, 마크(GOT7)"
+                        gtag('event', '남자 결과 ISTJ', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "intj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...INTJ!"
+                        resultExplain = "모든 것을 계획한다! 혼자서 계획을 짜고 지키는 것에 행복감을 느껴요. 무신경하다는 얘기를 자주 듣지만 좋아하는 거에는 엄청 집착해요. 한 번 정붙이는데 시간이 걸리지만 그만큼 오래가요. 공상이 많고 얘기하는 걸 좋아해서 작품을 다각도로 해석하는 걸 좋아해요"
+                        resultCeleb = "INTJ 연예인: 김민기(개그맨), 빽가, 유준상, 이경규"
+                        gtag('event', '남자 결과 INTJ', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "infp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...INFP!"
+                        resultExplain = "나는 생각하고 또 생각한다! 망상을 많이 해요. 게으른 완벽주의자에요. 완벽하게 하지 못하면 시작도 안 하는 경우도 있어요. 여러 명이서 노는 것보다 한 두 명이서 노는 걸 좋아해요. 혼자 있는 건 좋지만 외로운 건 싫어해요"
+                        resultCeleb = "INFP 연예인: 강호동, 강하늘, 나영석, 문빈(아스트로)"
+                        gtag('event', '남자 결과 INFP', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "intp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...INTP!"
+                        resultExplain = "미루기 끝판왕! 혼자 있을 때 가장 편안함을 느껴요. 주관이 뚜렷하고 호불호가 확실해요. 감수성이 풍부하고 공상을 자주 해요. 남에게 피해 주는 걸 싫어해서 행동을 아주 조심해요. 감정 표현을 잘 하지 않고 웬만한 일에 상처를 받지 않아요"
+                        resultCeleb = "INTP 연예인: 정국(BTS), 안효섭, 김우빈, 송강"
+                        gtag('event', '남자 결과 INTP', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "enfj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ENFJ!"
+                        resultExplain = "주인공은 내가!! 사람들을 이끄는 것에 타고난 기질이 있어서 리더 역할을 많이 해요. 사람들에게 신뢰를 많이 받아요. 친구에게 잘해주려 신경 쓰는 만큼 상처를 많이 받아요"
+                        resultCeleb = "ENFJ 연예인: 강다니엘, 공명, 임시완, 류승룡"
+                        gtag('event', '남자 결과 ENFJ', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "enfp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ENFP!"
+                        resultExplain = "자유로운 영혼! 새로운 사람들과 노는 것을 너무 좋아해서 친해지는 과정조차도 행복이에요. 낯을 조금 가리지만 풀리면 금방 친해지고 말도 많아져요. 얘기하는 거 엄청 좋아해요. 흥미 있고 관심 있는 건 열정적이지만 변덕이 심해서 금방 식을 수도 있어요"
+                        resultCeleb = "ENFP 연예인: 김진호(SG워너비), 유연석, 노홍철, 옹성우"
+                        gtag('event', '남자 결과 ENFP', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "entj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ENTJ!"
+                        resultExplain = "자기 일 척척 해내는 똑똑이. 피해 주는 거, 피해 받는 거 엄청 싫어해요. 공감 능력이 조금 부족하지만 해결책을 찾아주려 노력해요. 현실적으로 보이지만 혼자 있을 때는 재밌는 상상을 많이 해요"
+                        resultCeleb = "ENTJ 연예인: 여진구, 이승기, 키(샤이니), 스윙스"
+                        gtag('event', '남자 결과 ENTJ', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "entp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ENTP!"
+                        resultExplain = "논쟁의 중심엔 항상 내가 있다! 사람들과 지내는 걸 좋아하지만 혼자만의 시간이 필요해요.혼자서도 잘 돌아다니고 독립심이 강해요. 자기애가 강하고 변덕이 심해요. 내 의견이랑 다르면 상대방을 설득하려 노력해요. 지나간 일에 후회를 잘 하지 않아서 스트레스를 많이 받지 않아요"
+                        resultCeleb = "ENTP 연예인: 민혁(몬스타엑스), 육성재, 이이경, 임창정, 이진욱"
+                        gtag('event', '남자 결과 ENTP', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "esfj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ESFJ!"
+                        resultExplain = "인기쟁이. 책 읽고 영화 보는 걸 좋아해요. 친구를 만나면 잘 맞춰줘요. 상담이나 고민도 잘 들어주고 주변 사람들이 불행하면 내가 다 불행해져요. 상대방을 너무 배려해서 상처를 받아도 잘 얘기하지 못해요. 새로운 사람과의 만남 특히! 술자리를 좋아해요"
+                        resultCeleb = "ESFJ 연예인: 마동석, 조진웅, 조세호, 안재홍"
+                        gtag('event', '남자 결과 ESFJ', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "esfp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ESFP!"
+                        resultExplain = "친구들 다 불러~ 친화력 갑! 사람들을 너무 좋아해요. 사교성도 좋아서 처음 보는 친구랑 노는 것도 전혀 상관 쓰지 않아요. 사람의 단점 보다 장점을 보려고 하는 평화주의자예요. 혼자 있어도 계속 무언갈 계속하고 있어요"
+                        resultCeleb = "ESFP 연예인: 오상욱, 이상엽, 정준하, 지석진, 큐(더보이즈)"
+                        gtag('event', '남자 결과 ESFP', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "estj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ESTJ!"
+                        resultExplain = "모든 일은 내 손을 거쳐야 직성이 풀린다! 호불호가 확실해요. 그냥 노는 것보다 이것저것 배우는 걸 좋아해요. 공감 능력이 많이 떨어져요. 즉흥적 X 모든 것을 계획한 대로!. 목표를 한 번 정하면 끝을 봐야 해요"
+                        resultCeleb = "ESTJ 연예인: 김구라, 류준열, 데프콘, 송형주(음뫄 핫소스), 여원(펜타곤)"
+                        gtag('event', '남자 결과 ESTJ', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+                    case "estp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ESTP!"
+                        resultExplain = "삶은 흘러가는 대로! 하고 싶은 건 꼭 해야 하지만 하고 싶은 것도 금방 까먹어요. 남한테 관심이 많지 않지만 리더십이 있어 모임에서 분위기를 주도해요. 손재주가 좋아서 취미로 베이킹, 뜨개질, 인형 만들기를 하면 좋아요. 외로움을 많이 타고 자기가 좋아하는 사람들에겐 표현을 아끼지 않아요"
+                        resultCeleb = "ESTP 연예인: 전현무, 프니엘, 태현(TXT), 신동엽, 손준호"
+                        gtag('event', '남자 결과 ESTP', {
+                            'event_category': '남자 결과'
+                        });
+                        break;
+
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                        gtag('event', '남자 결과 알수없음', {
+                            'event_category': '남자 결과'
+                        });
+                }
+            } else {
+                gtag('event', 'MBTI 테스트 수행', {
+                    'event_category': '동MBTI 테스트 수행',
+                    'event_label': '여자'
+                });
+                switch (prediction[0].className) {
+                    case "isfj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ISFJ!"
+                        resultExplain = "게으른 완벽주의자! 단체 활동 보다 혼자 할 수 있는 일을 좋아해요. 배려심이 많고 공감도 잘해줘요. 겉으로는 덤덤해 보이지만 속으로 많은 생각을 해요. 어쩔 땐 내향적이고 어쩔 땐 외향적이라서 나도 날 잘 몰라요"
+                        resultCeleb = "ISFJ 연예인: 다현(트와이스), 정연(트와이스), 노정의, 루다(우주소녀), 야부키 나코(아이즈원)"
+                        gtag('event', '여자 결과 ISFJ', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "istp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ISTP!"
+                        resultExplain = "무뚝뚝한 당신의 첫인상은 차가워 보이지만 묘한 매력을 풍겨 언제나 인기가 넘친다. 자존심이 세계 1등과 맞먹지만 관심 받는 것을 좋아하고 연인에게는 은근히 애교쟁이다. 시크한 츤데레로 연인에게 끊임없이 설렘을 안겨주는 당신은 고양이와 닮았다!"
+                        resultCeleb = "ISTP 연예인: 권진아, 안유진(아이브), 전종서, 조이현, 한혜진, 홍진경"
+                        gtag('event', '여자 결과 ISTP', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "isfp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ISFP!"
+                        resultExplain = "나는 너 너는 나! 공감 능력이 정말 뛰어나요. 주목받는 걸 싫어하고 소소하게 칭찬받는 걸 좋아해요. 주변 의견을 잘 받아들이고 양보도 잘해요. 거절을 못 해서 하기 싫지만 할 때도 있어요. 겸손하다는 말을 자주 들어요"
+                        resultCeleb = "ISFP 연예인: 김다미, 설현, 윤보미(에이핑크), 윈터(aespa)❤️❤️, 미나(트와이스)"
+                        gtag('event', '여자 결과 ISFP', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "infj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...INFJ!"
+                        resultExplain = "집돌이, 집순이들! 새로운 일보다는 익숙한 일을 하는 걸 좋아해요. 친한 친구와 단둘이 노는 걸 좋아하고 내가 좋아하는 사람한테 정말 잘해줘요. 감수성이 풍부하고 생각이 많아요"
+                        resultCeleb = "INFJ 연예인: 류수정, 박신혜, 솔라(마마무), 아이유, 정소민, 강한나"
+                        gtag('event', '여자 결과 INFJ', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "istj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ISTJ!"
+                        resultExplain = "시간 약속을 잘 지키고 약속 어기는 것을 엄청 싫어해요. 일이 틀어지는 게 싫어서 혼자 일하는 게 좋아요. 남보다는 나에게 관심이 많아요. 공감 능력이 조금 부족해요. 여행 가면 주로 내가 계획을 세워요"
+                        resultCeleb = "ISTJ 연예인: 써니(소녀시대), 이보영, 이세영, 보나"
+                        gtag('event', '여자 결과 ISTJ', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "intj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...INTJ!"
+                        resultExplain = "모든 것을 계획한다! 혼자서 계획을 짜고 지키는 것에 행복감을 느껴요. 무신경하다는 얘기를 자주 듣지만 좋아하는 거에는 엄청 집착해요. 한 번 정붙이는데 시간이 걸리지만 그만큼 오래가요. 공상이 많고 얘기하는 걸 좋아해서 작품을 다각도로 해석하는 걸 좋아해요"
+                        resultCeleb = "INTJ 연예인: 류진(ITZY), 손나은(에이핑크), 공민지, 보아"
+                        gtag('event', '여자 결과 INTJ', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "infp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...INFP!"
+                        resultExplain = "나는 생각하고 또 생각한다! 망상을 많이 해요. 게으른 완벽주의자에요. 완벽하게 하지 못하면 시작도 안 하는 경우도 있어요. 여러 명이서 노는 것보다 한 두 명이서 노는 걸 좋아해요. 혼자 있는 건 좋지만 외로운 건 싫어해요"
+                        resultCeleb = "INFP 연예인: 김숙, 김지원, 김향기, 박은빈, 선미, 소유, 한소희"
+                        gtag('event', '여자 결과 INFP', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "intp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...INTP!"
+                        resultExplain = "미루기 끝판왕! 혼자 있을 때 가장 편안함을 느껴요. 주관이 뚜렷하고 호불호가 확실해요. 감수성이 풍부하고 공상을 자주 해요. 남에게 피해 주는 걸 싫어해서 행동을 아주 조심해요. 감정 표현을 잘 하지 않고 웬만한 일에 상처를 받지 않아요"
+                        resultCeleb = "INTP 연예인: 권나라, 김소연, 심민아, 김신영, 고원(이달의 소녀)"
+                        gtag('event', '여자 결과 INTP', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "enfj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ENFJ!"
+                        resultExplain = "주인공은 내가!! 사람들을 이끄는 것에 타고난 기질이 있어서 리더 역할을 많이 해요. 사람들에게 신뢰를 많이 받아요. 친구에게 잘해주려 신경 쓰는 만큼 상처를 많이 받아요"
+                        resultCeleb = "ENFJ 연예인: 강예서, 권서경, 리아(ITZY), 박소담, 우기"
+                        gtag('event', '여자 결과 ENFJ', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "enfp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ENFP!"
+                        resultExplain = "자유로운 영혼! 새로운 사람들과 노는 것을 너무 좋아해서 친해지는 과정조차도 행복이에요. 낯을 조금 가리지만 풀리면 금방 친해지고 말도 많아져요. 얘기하는 거 엄청 좋아해요. 흥미 있고 관심 있는 건 열정적이지만 변덕이 심해서 금방 식을 수도 있어요"
+                        resultCeleb = "ENFP 연예인: 권은비(아이즈원), 로제(블랙핑크), 박나래, 유나(ITZY), 전소민"
+                        gtag('event', '여자 결과 ENFP', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "entj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ENTJ!"
+                        resultExplain = "자기 일 척척 해내는 똑똑이. 피해 주는 거, 피해 받는 거 엄청 싫어해요. 공감 능력이 조금 부족하지만 해결책을 찾아주려 노력해요. 현실적으로 보이지만 혼자 있을 때는 재밌는 상상을 많이 해요"
+                        resultCeleb = "ENTJ 연예인: 문가영, 희진(이달의 소녀), 베이비소울(러블리즈), 티파니 영(소녀시대)"
+                        gtag('event', '여자 결과 ENTJ', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "entp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ENTP!"
+                        resultExplain = "논쟁의 중심엔 항상 내가 있다! 사람들과 지내는 걸 좋아하지만 혼자만의 시간이 필요해요.혼자서도 잘 돌아다니고 독립심이 강해요. 자기애가 강하고 변덕이 심해요. 내 의견이랑 다르면 상대방을 설득하려 노력해요. 지나간 일에 후회를 잘 하지 않아서 스트레스를 많이 받지 않아요"
+                        resultCeleb = "ENTP 연예인: 권민아, 고민시, 리정, 라미란, 김세정"
+                        gtag('event', '여자 결과 ENTP', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "esfj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ESFJ!"
+                        resultExplain = "인기쟁이. 책 읽고 영화 보는 걸 좋아해요. 친구를 만나면 잘 맞춰줘요. 상담이나 고민도 잘 들어주고 주변 사람들이 불행하면 내가 다 불행해져요. 상대방을 너무 배려해서 상처를 받아도 잘 얘기하지 못해요. 새로운 사람과의 만남 특히! 술자리를 좋아해요"
+                        resultCeleb = "esfj 연예인: 박초롱, 오나라, 장윤정, 혜리, 효정"
+                        gtag('event', '여자 결과 ESFJ', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "esfp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ESFP!"
+                        resultExplain = "친구들 다 불러~ 친화력 갑! 사람들을 너무 좋아해요. 사교성도 좋아서 처음 보는 친구랑 노는 것도 전혀 상관 쓰지 않아요. 사람의 단점 보다 장점을 보려고 하는 평화주의자예요. 혼자 있어도 계속 무언갈 계속하고 있어요"
+                        resultCeleb = "ESFP 연예인: 강혜원, 수영(소녀시대), 에일리, 이선빈, 주이(모모랜드)"
+                        gtag('event', '여자 결과 ESFP', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "estj":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ESTJ!"
+                        resultExplain = "모든 일은 내 손을 거쳐야 직성이 풀린다! 호불호가 확실해요. 그냥 노는 것보다 이것저것 배우는 걸 좋아해요. 공감 능력이 많이 떨어져요. 즉흥적 X 모든 것을 계획한 대로!. 목표를 한 번 정하면 끝을 봐야 해요"
+                        resultCeleb = "ESTJ 연예인: 제시카, 제인(모모랜드), 한채영, 이지혜, 노지선"
+                        gtag('event', '여자 결과 ESTJ', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+                    case "estp":
+                        resultTitle = "인공지능이 판단한 당신의 MBTI는...ESTP!"
+                        resultExplain = "삶은 흘러가는 대로! 하고 싶은 건 꼭 해야 하지만 하고 싶은 것도 금방 까먹어요. 남한테 관심이 많지 않지만 리더십이 있어 모임에서 분위기를 주도해요. 손재주가 좋아서 취미로 베이킹, 뜨개질, 인형 만들기를 하면 좋아요. 외로움을 많이 타고 자기가 좋아하는 사람들에겐 표현을 아끼지 않아요"
+                        resultCeleb = "ESTP 연예인: 경리, 이유비, 김립(이달의 소녀), 연정(우주소녀), 레이나(에프터스쿨)"
+                        gtag('event', '여자 결과 ESTP', {
+                            'event_category': '여자 결과'
+                        });
+                        break;
+
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                        gtag('event', '여자 결과 알수없음', {
+                            'event_category': '여자 결과'
+                        });
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
+            var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "isfj":
+                        labelTitle = "ISFJ"
+                        break;
+                    case "istp":
+                        labelTitle = "ISTP"
+                        break;
+                    case "isfp":
+                        labelTitle = "ISFP"
+                        break;
+                    case "infj":
+                        labelTitle = "INFJ"
+                        break;
+                    case "istj":
+                        labelTitle = "ISTJ"
+                        break;
+                    case "intj":
+                        labelTitle = "INTJ"
+                        break;
+                    case "infp":
+                        labelTitle = "INFP"
+                        break;
+                    case "intp":
+                        labelTitle = "INTP"
+                        break;
+                    case "enfj":
+                        labelTitle = "ENFJ"
+                        break;
+                    case "enfp":
+                        labelTitle = "ENFP"
+                        break;
+                    case "entj":
+                        labelTitle = "ENTJ"
+                        break;
+                    case "entp":
+                        labelTitle = "ENTP"
+                        break;
+                    case "esfj":
+                        labelTitle = "ESFJ"
+                        break;
+                    case "esfp":
+                        labelTitle = "ESFP"
+                        break;
+                    case "estj":
+                        labelTitle = "ESTJ"
+                        break;
+                    case "estp":
+                        labelTitle = "ESTP"
+                        break;
+
+                    default:
+                        labelTitle = "알수없음"
+                }
+                var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+</body>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+    if (!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "122434597ca5820";
+    if (window.wcs) {
+        wcs_do();
+    }
+</script>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+gender toggle
+Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+
+</html>

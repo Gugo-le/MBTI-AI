@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+Sitemap: https://mbtiai.netlify.app/sitemap.xml
