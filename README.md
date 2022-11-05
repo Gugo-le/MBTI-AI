@@ -17,20 +17,13 @@
 1명
 
 **실행순서**
-1. 사용자는 2개의 선택지 중 하나의 선택지를 고르게 된다.
+1. 성별을 선택한다.
 
-2. 총 12단계의 선택을 하게되면 자신의 결정에 따른 MBTI결과와 이에 대응하는 공부 방법을 하단에 추천해준다.
+2. 자신의 얼굴 사진을 업로드하거나 찍는다.
 
-3. 자신의 성향과 맞는 다른 유형의 사람을 추천해준다.
+3. 인공지능이 당신의 얼굴을 보고 예상하는 mbti를 출력한다.
 
-**모둠**
-<br>
-1.구현승(모둠장): 데이터 마이닝, 데이터 분석 및 시각화, <br>인공지능 학습 및 React웹앱 제작, ppt제작, 보고서 작성 <br>
-2. 김민재: 데이터 수집 <br>
-3. 박건우: 자료 정리 및 데이터 마이닝 <br>
-4. 방승환: 자료 수집 <br>
-5. 이준서: ppt 제작 및 자료 조사 및 보고서 작성<br>
-6. 이혜원: ppt 제작 및 보고서 작성
+
 
 
 	
@@ -41,9 +34,9 @@
 
 ## 참고자료
 
-1. 우리 반 아이들 설문 조사
+1. 조코딩 유튜브
 
-2. 건우의 데이터 통계 자료
+2. teachable machine
 <br>
 
 ## Dependencies & Tools 
@@ -54,48 +47,24 @@
 **tools**
 
 IDE : VScode
-Framework : ReactJS
+Framework : HTML, CSS, JS
 
 
 
-**dependencies**
+## How to develop
 
-1. fontawesome : 고퀄리티의 아이콘을 위하여 사용하였음
-2. react-copy-clipboard : 링크 복사 기능을 위하여 사용함
-3. react-router-dom : 라우터를 사용하여 결과물을 출력하기 위하여 사용
-4. styled-reset : css 초기화 등을 간편하게 하기 위하여 사용함.
+```python
+from icrawler.builtin import GoogleImageCrawler
 
-
-
-## How to use
-
-**설치방법**
-
-1.create-react-app 설치
-
+google_crawler = GoogleImageCrawler(storage={'root_dir':'name'})
+google_crawler.crawl(keyword = 'searching word',max_num=150)
 ```
-create-react-app
-```
-
-2.설치하기
-
-```
-npm install
-```
-3. 빌드하기
-
-```
-npm start
-```
-
-4. deploy netilfy
-
-```
-deploy netlify
-```
+크롤링 코드
 
 
 
 
 
-# mbti-study
+
+
+
