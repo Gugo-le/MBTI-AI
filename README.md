@@ -50,7 +50,7 @@
 **tools**
 
 IDE : VScode
-Framework : HTML, CSS, JS, PYTHON
+Framework : HTML, CSS, JS
 
 
 
@@ -67,13 +67,48 @@ google_crawler.crawl(keyword = 'searching word',max_num=150)
 [https://teachablemachine.withgoogle.com/](https://teachablemachine.withgoogle.com//) 
 
 teachable machine으로 이미지 학습
+<br>
+
+# 웹 엔진 최적화 하는 법
 
 
+```bash
+<meta name="naver-site-verification" content="Arbitrary value" />
+<meta name="google-site-verification" content="Arbitrary value" />
+```
+각각의 사이트에 들어가서 인증을 받는다.
+
+<h2>sitemap.xml</h2>
+
+```bash
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
+<url>
+  <loc>"your web address"</loc>
+  <lastmod>2022-07-26T09:32:23+00:00</lastmod>
+</url>
 
 
+</urlset>
+```
 
+
+<h2>robots.txt</h2>
+
+```bash
+User-agent: *Allow:/
+Sitemap: "your web address"/sitemap.xml
+
+```
+
+이런 식으로 웹사이트 코드 폴더 추가 후
 
 
 
