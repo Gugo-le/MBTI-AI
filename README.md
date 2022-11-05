@@ -50,7 +50,7 @@
 **tools**
 
 IDE : VScode
-Framework : HTML, CSS, JS
+Framework : HTML, CSS, JS, PYTHON
 
 
 
