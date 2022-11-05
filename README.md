@@ -64,6 +64,10 @@ google_crawler.crawl(keyword = 'searching word',max_num=150)
 ```
 크롤링 코드
 
+[https://teachablemachine.withgoogle.com/](https://teachablemachine.withgoogle.com//) 
+
+teachable machine으로 이미지 학습
+
 
 
 
