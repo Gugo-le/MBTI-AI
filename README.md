@@ -5,6 +5,9 @@
 
 ## About this
 
+[https://mbtiai.netlify.app/](https://mbtiai.netlify.app/) 
+
+개발 일지: [https://m.blog.naver.com/PostView.naver?blogId=rngustmd0719&logNo=222831236029&navType=by](https://m.blog.naver.com/PostView.naver?blogId=rngustmd0719&logNo=222831236029&navType=by) 
 
 **제작동기**
 
@@ -60,6 +63,8 @@ google_crawler = GoogleImageCrawler(storage={'root_dir':'name'})
 google_crawler.crawl(keyword = 'searching word',max_num=150)
 ```
 크롤링 코드
+
+
 
 
 
