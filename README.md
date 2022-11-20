@@ -111,5 +111,7 @@ Sitemap: "your web address"/sitemap.xml
 이런 식으로 웹사이트 코드 폴더 추가 후 네이버 [서치어드바이저](https://searchadvisor.naver.com/),
 구글 [서치콘솔](https://search.google.com/search-console/welcome)에서 웹 엔진 최적화를 해주면 된다.
 
+# 프로젝트 종료!
 
+노마드 코더 커뮤니티 [보러가기](https://nomadcoders.co/community/thread/5696)
 
